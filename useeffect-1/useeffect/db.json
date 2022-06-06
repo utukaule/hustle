@@ -1,0 +1,47 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "value": "Utkarsh",
+      "isCompleted": true
+    },
+    {
+      "id": 2,
+      "value": "Suvarna",
+      "isCompleted": true
+    },
+    {
+      "id": 3,
+      "value": "Vahini",
+      "isCompleted": true
+    },
+    {
+      "isCompleted": false,
+      "id": 4
+    },
+    {
+      "isCompleted": false,
+      "id": 5
+    },
+    {
+      "text": "asdasd",
+      "isCompleted": false,
+      "id": 6
+    },
+    {
+      "text": "asdasd",
+      "isCompleted": false,
+      "id": 7
+    },
+    {
+      "text": "sdfsdf",
+      "isCompleted": false,
+      "id": 8
+    },
+    {
+      "text": "asdasd",
+      "isCompleted": false,
+      "id": 9
+    }
+  ]
+}
