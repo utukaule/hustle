@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <Navbar />
       <Body />
-      sdgsdfg
+      
     </div>
   );
 }

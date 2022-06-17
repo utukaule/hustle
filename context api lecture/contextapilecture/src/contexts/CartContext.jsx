@@ -1,9 +1,15 @@
-import { createContext } from 'react';
+import { useState } from 'react';
+import { createContext } from 'react'
 
-export const CreateContext = createContext();
+//creating context
+export const CartContext = createContext();
 
-export const CartProviderWrapper = ({ childern }) => {
-
-    <CreateContext.Provider value={0}>{childern}</CreateContext.Provider>
-
+//creating wrapper
+export const CartContextProvider = ({ children }) => {
+    const [cartCount, setCartCount] = useState(10);
+    const handleCartUpdate = (value) => {
+        setCartCount(cartCount + value);
+    }
+    return <CartContext.Provider value={{cartCount,handleCartUpdate}}>{ children }</CartContext.Provider>
 }
+

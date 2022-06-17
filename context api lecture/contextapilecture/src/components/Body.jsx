@@ -3,7 +3,6 @@ export const Body = () =>{
     return (
         <div>
             <Cart/>
-        
         </div>
     )
 }

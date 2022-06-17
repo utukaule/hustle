@@ -1,10 +1,10 @@
 import { useContext } from 'react'
-import {CreateContext} from '../contexts/CartContext'
-export const Navbar = ()=>{
-    const value = useContext(CreateContext)
+import {CartContext} from '../contexts/CartContext'
+export const Navbar = () => {
+    const {cartCount} = useContext(CartContext);
     return (
         <div>
-            <h3>Cart : {value}</h3>
+            <h3>Cart : {cartCount}</h3>
         </div>
     )
 }
