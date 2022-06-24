@@ -3,13 +3,19 @@
 export const States = () => {
     const getData = (data) => {
         console.log("Got data from child", data)
-    } 
+    }
     return <>
         <First datafn={getData} />
     </>
 }
 
-function First({datafn}){
+function First({ datafn }) {
     const data = "Parent called me";
-    datafn(data)
+
+    return <>
+        <button onClick={() => {
+            datafn(data)
+        }
+        }>Trandfer Data to Parent</button>
+    </>
 }
