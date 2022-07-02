@@ -3,7 +3,9 @@ import { TodoInput } from "./TodoInput"
 import { TodoItem } from "./TodoItem";
 import {nanoid} from 'nanoid';
 export const Todo = () => {
+    
     const [todoList, setTodoList] = useState([]);
+    
     const getData = (todo) => {
         console.log("received ", todo)
         const payload = {
@@ -13,6 +15,7 @@ export const Todo = () => {
         }
         setTodoList([...todoList,payload])
     }
+    
     const handleStatus = (id) => {
         console.log("id is",id)
         const newarr = todoList.map((e)=>{
