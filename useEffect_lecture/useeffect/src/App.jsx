@@ -1,13 +1,27 @@
 import './App.css';
-import { Hello } from './components/Hello';
 import { useState } from 'react';
+import { useEffect } from 'react';
 
 function App() {
-  const [show, setShow] = useState(true);
+  const [todos, setTodos] = useState([]);
+  
+  //synchronous function
+  useEffect(() => {
+    fetch("http://localhost:8080/users")
+      .then((d) => d.json()) //convert to json
+      .then((data) => {
+        setTodos(data);
+      })
+  },[])
+
+
   return (
     <div className="App">
-      {show ? <Hello /> : null}
-      <button onClick={() => setShow(!show)}>{show ? "Tap to hide" : "Tap to show"}</button>
+      {todos.map((item)=>{
+        return <>
+          <div>{item.id} - {item.name} </div>
+        </>
+      })}
     </div>
   );
 }
